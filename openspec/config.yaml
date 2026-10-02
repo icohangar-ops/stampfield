@@ -1,0 +1,6 @@
+schema: spec-driven
+
+context: |
+  StampField is an offline-first field photo PWA. All project and photo
+  data stays in the browser. Pro is a local one-time unlock mock at $14.99,
+  not a subscription and not a payment integration.

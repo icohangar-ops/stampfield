@@ -1,0 +1,144 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-source-sans);
+  --font-mono: var(--font-ibm-plex);
+  --font-heading: var(--font-fraunces);
+  --color-stamp: var(--stamp);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  --background: #f3efe6;
+  --foreground: #1c1915;
+  --card: #faf7f1;
+  --card-foreground: #1c1915;
+  --popover: #faf7f1;
+  --popover-foreground: #1c1915;
+  --primary: #14573f;
+  --primary-foreground: #f6f3ec;
+  --secondary: #efe6d6;
+  --secondary-foreground: #1c1915;
+  --muted: #e7e0d4;
+  --muted-foreground: #4a453c;
+  --accent: #f3d7c4;
+  --accent-foreground: #1c1915;
+  --destructive: #9f2d2d;
+  --border: #d5cec2;
+  --input: #cfc6b8;
+  --ring: #14573f;
+  --chart-1: #14573f;
+  --chart-2: #9a3412;
+  --chart-3: #c2410c;
+  --chart-4: #4a453c;
+  --chart-5: #1c1915;
+  --radius: 0.8rem;
+  --stamp: #9a3412;
+  --sidebar: #faf7f1;
+  --sidebar-foreground: #1c1915;
+  --sidebar-primary: #14573f;
+  --sidebar-primary-foreground: #f6f3ec;
+  --sidebar-accent: #efe6d6;
+  --sidebar-accent-foreground: #1c1915;
+  --sidebar-border: #d5cec2;
+  --sidebar-ring: #14573f;
+}
+
+.dark {
+  --background: #141311;
+  --foreground: #f3efe6;
+  --card: #1e1c19;
+  --card-foreground: #f3efe6;
+  --popover: #1e1c19;
+  --popover-foreground: #f3efe6;
+  --primary: #8dceab;
+  --primary-foreground: #10241b;
+  --secondary: #2a2723;
+  --secondary-foreground: #f3efe6;
+  --muted: #2a2723;
+  --muted-foreground: #c8bfb2;
+  --accent: #3a2a22;
+  --accent-foreground: #f3efe6;
+  --destructive: #f0a3a3;
+  --border: rgb(243 239 230 / 14%);
+  --input: rgb(243 239 230 / 18%);
+  --ring: #8dceab;
+  --chart-1: #8dceab;
+  --chart-2: #f3b08a;
+  --chart-3: #c2410c;
+  --chart-4: #c8bfb2;
+  --chart-5: #f3efe6;
+  --stamp: #f3b08a;
+  --sidebar: #1e1c19;
+  --sidebar-foreground: #f3efe6;
+  --sidebar-primary: #8dceab;
+  --sidebar-primary-foreground: #10241b;
+  --sidebar-accent: #2a2723;
+  --sidebar-accent-foreground: #f3efe6;
+  --sidebar-border: rgb(243 239 230 / 14%);
+  --sidebar-ring: #8dceab;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-fraunces), Georgia, serif;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
